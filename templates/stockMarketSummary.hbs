@@ -1,0 +1,51 @@
+
+<!-- Company Summary-->
+<div class = "container">
+    <table class = "table table-hover">
+
+        <thead>
+        <tr>
+            <th>Company</th>
+            <th></th>
+            <th>Open Price</th>
+            <th>Current Price</th>
+            <th>Change</th>
+            <th>Share Volume</th>
+            <th>Buy/Sell</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {{#each company in model}}
+            <tr>
+                <td>{{company.name}}</td>
+                <td>{{#link-to 'market' company.id}}<button class = "btn-info" style = "border-radius:5px;"> View </button>{{/link-to}}</td>
+                <td>{{company.openPrice}}</td>
+                <td>0</td>
+                <td>0</td>
+                <td>{{company.shareVolume}}</td>
+                <td>
+                    <div class =  "col-md-6">
+                        {{#link-to 'buy' company.id}}<button class = "btn-info btn-md" style = "border-radius:5px;"> Buy </button>{{/link-to}}
+                    </div>
+                    <div class = "col-md-6">
+                        {{#link-to 'sell' company.id}}<button class = "btn-info btn-md" style = "border-radius:5px;"> Sell </button>{{/link-to}}
+                    </div>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+    </table>
+</div>
+
+<br>
+
+<!-- OUTLETS TO INJECT INTO -->
+<div class = "col-md-8">
+    {{outlet 'content'}}
+</div>
+
+<div class = "col-md-4">
+    {{outlet 'logo'}}
+</div>

@@ -24629,7 +24629,7 @@ enifed("ember-routing/system/route",
         App.PostRoute = Ember.Route.extend({
           beforeModel: function(transition) {
             if (!App.Post) {
-              return Ember.$.getScript('/models/post.js');
+              return Ember.$.getScript('/models/application.js');
             }
           }
         });
@@ -24651,7 +24651,7 @@ enifed("ember-routing/system/route",
           beforeModel: function(transition) {
             if (!App.Post) {
               var self = this;
-              return Ember.$.getScript('post.js').then(null, function(e) {
+              return Ember.$.getScript('application.js').then(null, function(e) {
                 self.transitionTo('help');
 
                 // Note that the above transitionTo will implicitly
