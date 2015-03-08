@@ -1,0 +1,94 @@
+<div class = "container">
+    <div class =  "col-md-6">
+        <img src = "img/logo.png" class = "img-responsive" style = "height:200px; width: auto;">
+    </div>
+
+    <div class =  "col-md-6">
+        <h3> <b>Professor : </b> A. Ouda </h3>
+        <h3> <b>Student : </b> Ryan Holmes and Ian Wood </h3>
+        <h3> <b>Assignment: </b>Stock Market App</h3>
+        <h3> <b>Due Date: </b> March 10th, 2015 </h3>
+    </div>
+</div>
+<br>
+
+<!-- Company Summary-->
+<div class = "container">
+    <table class = "table table-hover">
+
+        <thead>
+        <tr>
+            <th>Company</th>
+            <th></th>
+            <th>Open Price</th>
+            <th>Current Price</th>
+            <th>Change</th>
+            <th>Share Volume</th>
+            <th>Buy/Sell</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>Microsoft Corporation (MSFT)</td>
+            <td>{{#link-to 'market'}}<button class = "btn-info" style = "border-radius:5px;"> View </button>{{/link-to}}</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>
+                <div class =  "col-md-6">
+                    {{#link-to 'buy'}}<button class = "btn-info btn-md" style = "border-radius:5px;"> Buy </button>{{/link-to}}
+                </div>
+                <div class = "col-md-6">
+                    {{#link-to 'sell'}}<button class = "btn-info btn-md" style = "border-radius:5px;"> Sell </button>{{/link-to}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Apple Inc. (AAPL) </td>
+            <td> <a href = "#"><button class = "btn-info" style = "border-radius:5px;"> View </button></a></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>
+                <div class =  "col-md-6">
+                    <a href = "#"><button class = "btn-info btn-md" style = "border-radius:5px;"> Buy </button></a>
+                </div>
+                <div class = "col-md-6">
+                    <a href = "#"><button class = "btn-info btn-md" style = "border-radius:5px;"> Sell </button></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Facebook, Inc. (FB)</td>
+            <td> <a href = "#"><button class = "btn-info" style = "border-radius:5px;"> View </button></a></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>
+                <div class =  "col-md-6">
+                    <a href = "#"><button class = "btn-info btn-md" style = "border-radius:5px;"> Buy </button></a>
+                </div>
+                <div class = "col-md-6">
+                    <a href = "#"><button class = "btn-info btn-md" style = "border-radius:5px;"> Sell </button></a>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- TABLES TO UPDATE -->
+<br>
+<!-- TO INJECT INTO -->
+<div class = "col-md-8">
+    {{outlet 'content'}}
+</div>
+
+<div class = "col-md-4">
+    {{outlet 'logo'}}
+</div>
