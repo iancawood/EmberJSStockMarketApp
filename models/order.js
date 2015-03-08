@@ -1,4 +1,5 @@
-App.order = DS.Model.extend({
-    title: DS.attr(),
-    body: DS.attr()
+App.Order = DS.Model.extend({
+    date: DS.attr('string', { defaultValue: function() { return new Date(); }}),
+    size: DS.attr(),
+    price: DS.attr()
 });
