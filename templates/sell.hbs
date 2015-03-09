@@ -3,15 +3,15 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-addon">$</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Price">
+            <input type="text" class="form-control" id="sellPrice" placeholder="Price">
         </div>
     </div>
 
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-addon">#</div>
-            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Shares">
+            <input type="text" class="form-control" id="sellShare" placeholder="Shares">
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" id = "placeOrder">Submit</button>
+    <button type="submit" class="btn btn-primary" id = "placeOrder" {{action 'save' model.id}}>Submit</button>
 </form>
