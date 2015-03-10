@@ -13,6 +13,8 @@ App.BuyController = Ember.Controller.extend({
             newOrder.save().then(function() {
                 company.get('buyOrders').pushObject(newOrder);
             });
+
+            
         }
     }
 });

@@ -10,7 +10,7 @@
         </thead>
         {{#each order in groupedBuyOrders}}
             <tr>
-                <td></td>
+                <td>{{order.num}}</td>
                 <td>{{order.size}}</td>
                 <td>{{order.price}}</td>
             </tr>
@@ -31,7 +31,7 @@
         </thead>
         {{#each order in groupedSellOrders}}
             <tr>
-                <td></td>
+                <td>{{order.num}}</td>
                 <td>{{order.size}}</td>
                 <td>{{order.price}}</td>
             </tr>
